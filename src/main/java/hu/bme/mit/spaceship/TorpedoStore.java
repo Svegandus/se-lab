@@ -8,6 +8,7 @@ import java.util.Random;
 * (Deliberately contains bugs.)
 */
 public class TorpedoStore {
+  //Random number to have random number, because to be random
   private Random generator = new Random();
 
   // rate of failing to fire torpedos [0.0, 1.0]
@@ -30,6 +31,7 @@ public class TorpedoStore {
   }
 
   public boolean fire(int numberOfTorpedos){
+    //if soething wrong throw an exception
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
     }
